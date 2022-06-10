@@ -21,6 +21,7 @@
 		EA2120E628523C1D00C2ACA0 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2120E528523C1D00C2ACA0 /* LoginController.swift */; };
 		EA2120E82852496300C2ACA0 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2120E72852496300C2ACA0 /* HomeController.swift */; };
 		EA2120EA28524A2C00C2ACA0 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2120E928524A2C00C2ACA0 /* SignUpController.swift */; };
+		EA4EBA5E2853AADC00350457 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EBA5D2853AADC00350457 /* Validator.swift */; };
 		EAE00F5B284F7AF5002FD9CE /* InstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE00F5A284F7AF5002FD9CE /* InstagramManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		EA2120E528523C1D00C2ACA0 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EA2120E72852496300C2ACA0 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		EA2120E928524A2C00C2ACA0 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		EA4EBA5D2853AADC00350457 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		EAE00F5A284F7AF5002FD9CE /* InstagramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				E6E487701F35D345006B31C1 /* Info.plist */,
 				45B2CD3E2034673000689117 /* YourFacePhotoAlbum.swift */,
 				EAE00F5A284F7AF5002FD9CE /* InstagramManager.swift */,
+				EA4EBA5D2853AADC00350457 /* Validator.swift */,
 			);
 			path = FaceVision;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E487671F35D345006B31C1 /* ViewController.swift in Sources */,
+				EA4EBA5E2853AADC00350457 /* Validator.swift in Sources */,
 				EA2120E628523C1D00C2ACA0 /* LoginController.swift in Sources */,
 				EA2120E82852496300C2ACA0 /* HomeController.swift in Sources */,
 				EA2120EA28524A2C00C2ACA0 /* SignUpController.swift in Sources */,
