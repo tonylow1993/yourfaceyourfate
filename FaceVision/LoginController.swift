@@ -30,13 +30,16 @@ class LoginController: UIViewController, UINavigationControllerDelegate{
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-            
-            // TODO: Validate Text Fields
-            
-            // Create cleaned versions of the text field
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
+        // Create cleaned versions of the text field
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    
+        let validator = Validator()
+    
+        if validator.isAllFieldsNotEmpty(emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines),
+                                         passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) {
+            self.errorLabel.text =  "Please fill in all fields."
+        } else {
             // Signing in the user
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
@@ -54,9 +57,6 @@ class LoginController: UIViewController, UINavigationControllerDelegate{
                 }
             }
         }
-    
-    @objc private func didTapButton() {
-        print("Continue")
     }
 
     override func didReceiveMemoryWarning() {

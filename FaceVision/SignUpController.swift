@@ -33,21 +33,18 @@ class SignUpController: UIViewController {
     
     // Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message
     func validateFields() -> String? {
-        let validator = new Validator()
+        let validator = Validator()
         
         // Check that all fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
+        if validator.isAllFieldsNotEmpty(firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                                         lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                                         emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                                         passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)) {
             return "Please fill in all fields."
         }
         
         // Check if the password is secure
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if (validator.isPasswordValid(cleanedPassword) == false) {
+        if (validator.isPasswordValid(passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) == false) {
             // Password isn't secure enough
             return "Please make sure your password is at least 8 characters, contains a special character and a number."
         }
