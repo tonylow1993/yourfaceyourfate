@@ -49,14 +49,6 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
         data = cleanRows(file: data)
         csvRows = csv(data: data)
         
-        backBtn.tintColor = .black
-        saveBtn.tintColor = .black
-        shareBtn.tintColor = .black
-        
-        backBtn.setTitle("Back", for: .normal)
-        saveBtn.setTitle("Save", for: .normal)
-        shareBtn.setTitle("Share", for: .normal)
-        
         process()
         
     }
@@ -581,9 +573,10 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
         bg1.isHidden = true
         bg2.isHidden = true
         bg3.isHidden = true
+        saveBtn.isHidden = true
         shareBtn.isHidden = true
+        sharelbl.isHidden = true
         savelbl.isHidden = true
-        
     }
 }
 
