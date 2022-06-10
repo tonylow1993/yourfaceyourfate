@@ -135,10 +135,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrZ-6q-Vyy">
-                                <rect key="frame" x="192.5" y="742" width="29" height="31"/>
+                                <rect key="frame" x="188" y="735" width="38" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="38j-Ke-J61"/>
-                                    <constraint firstAttribute="height" constant="31" id="fEh-RL-xHH"/>
+                                    <constraint firstAttribute="width" constant="38" id="38j-Ke-J61"/>
+                                    <constraint firstAttribute="height" constant="38" id="fEh-RL-xHH"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="save">
@@ -177,7 +177,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-Aj-daI">
-                                <rect key="frame" x="70" y="782" width="50" height="20"/>
+                                <rect key="frame" x="67" y="782" width="50" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="CmR-17-LZT"/>
                                 </constraints>
@@ -198,7 +198,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAo-TL-zmA">
-                                <rect key="frame" x="300" y="782" width="44" height="20"/>
+                                <rect key="frame" x="303" y="782" width="44" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -235,14 +235,14 @@
                             <constraint firstItem="6XX-aO-mD1" firstAttribute="centerX" secondItem="dHp-Sa-RSO" secondAttribute="centerX" constant="-6" id="9b4-KY-E4d"/>
                             <constraint firstAttribute="bottom" secondItem="4Z2-Aj-daI" secondAttribute="bottom" constant="40" id="9gO-PA-0CV"/>
                             <constraint firstItem="jCu-5I-IC0" firstAttribute="top" secondItem="UpD-aj-jI8" secondAttribute="bottom" constant="25" id="9yS-dn-NXi"/>
-                            <constraint firstItem="4Z2-Aj-daI" firstAttribute="leading" secondItem="RbN-uO-qII" secondAttribute="leadingMargin" constant="50" id="AXs-N7-QKm"/>
+                            <constraint firstItem="4Z2-Aj-daI" firstAttribute="leading" secondItem="RbN-uO-qII" secondAttribute="leadingMargin" constant="47" id="AXs-N7-QKm"/>
                             <constraint firstAttribute="trailing" secondItem="dHp-Sa-RSO" secondAttribute="trailing" constant="5" id="BeW-bb-dQP"/>
                             <constraint firstItem="JaD-d6-J92" firstAttribute="width" secondItem="RbN-uO-qII" secondAttribute="width" multiplier="0.3" id="Dlk-xv-4zu"/>
                             <constraint firstItem="7lR-0M-tRm" firstAttribute="centerX" secondItem="RbN-uO-qII" secondAttribute="centerX" id="GgH-aR-Nh6"/>
                             <constraint firstAttribute="trailing" secondItem="oy2-W5-OEr" secondAttribute="trailing" constant="16" id="HzE-2O-3KG"/>
                             <constraint firstItem="x0g-hD-ywr" firstAttribute="centerY" secondItem="7lR-0M-tRm" secondAttribute="centerY" id="I4y-Cc-B8Q"/>
                             <constraint firstItem="dWS-VN-vqD" firstAttribute="top" secondItem="G7d-pJ-Pdu" secondAttribute="top" constant="-100" id="JSS-Ag-jvz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gAo-TL-zmA" secondAttribute="trailing" constant="50" id="Jk5-Va-ofC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gAo-TL-zmA" secondAttribute="trailing" constant="47" id="Jk5-Va-ofC"/>
                             <constraint firstItem="ogO-lr-tpg" firstAttribute="bottom" secondItem="G7d-pJ-Pdu" secondAttribute="bottom" constant="50" id="KMF-Zb-P8S"/>
                             <constraint firstItem="xrZ-6q-Vyy" firstAttribute="centerX" secondItem="RbN-uO-qII" secondAttribute="centerX" id="N7o-iY-fIt"/>
                             <constraint firstItem="GeS-jY-HuH" firstAttribute="centerY" secondItem="jCu-5I-IC0" secondAttribute="centerY" id="Ng5-7x-aNo"/>
@@ -631,11 +631,11 @@
     <resources>
         <image name="Tag BG" width="204" height="110"/>
         <image name="Tag BG 2" width="223" height="130"/>
-        <image name="back" width="38" height="38"/>
+        <image name="back" width="512" height="512"/>
         <image name="background" width="1562.5" height="2779.5"/>
         <image name="loginbg" width="720" height="1279"/>
-        <image name="save" width="29" height="31"/>
-        <image name="share" width="38" height="38"/>
+        <image name="save" width="512" height="512"/>
+        <image name="share" width="512" height="512"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
