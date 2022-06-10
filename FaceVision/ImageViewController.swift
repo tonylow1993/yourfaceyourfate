@@ -65,43 +65,6 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
         let finalImage:UIImage = captureScreen()!
         
         InstagramHelper.sharedManager.postImageToInstagramWithCaption(imageInstagram: finalImage, instagramCaption: (hashtag1.text!+hashtag2.text!+hashtag3.text!),controller: self)
-        
-        /*let instagramURL = NSURL(string: "instagram://app")
-        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
-            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-            let saveImagePath = (documentsPath as NSString).appendingPathComponent("Image.igo")
-            let imageData = UIImagePNGRepresentation(image)
-            do {
-                try imageData?.write(to: URL.init(fileURLWithPath: saveImagePath), options: .atomicWrite)
-            } catch {
-                print("Instagram sharing error")
-            }
-            //let imageURL = NSURL(fileURLWithPath: saveImagePath)
-            documentInteractionController = UIDocumentInteractionController.init(url: URL.init(fileURLWithPath: saveImagePath))
-            //documentInteractionController.annotation = ["InstagramCaption" : "Testing"]
-            documentInteractionController.uti = "com.instagram.exclusivegram"
-            
-            print(saveImagePath)
-            //let bounds = CGRect()
-            if !documentInteractionController.presentOpenInMenu(from: self.view.frame, in: self.view, animated: true) {
-                print("Instagram not found")
-            }
-        }
-        else {
-            print("Instagram not found")
-        }
-        
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-        let checkValidation = FileManager.default
-        let getImagePath = paths.appending("image.igo")
-        try!  checkValidation.removeItem(atPath: getImagePath)
-        let imageData =  UIImageJPEGRepresentation(finalImage, 1.0)
-        try! imageData?.write(to: URL.init(fileURLWithPath: getImagePath), options: .atomicWrite)
-        var documentController : UIDocumentInteractionController!
-        documentController = UIDocumentInteractionController.init(url: URL.init(fileURLWithPath: getImagePath))
-        documentController.uti = "com.instagram.exclusivegram"
-        documentController.presentOptionsMenu(from:self.view.frame, in: self.view, animated: true)*/
-
     }
     
     @IBAction func savePhoto(_ sender: UIButton) {
@@ -173,7 +136,6 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
         let h = face.boundingBox.size.height * image.size.height
         let x = face.boundingBox.origin.x * image.size.width
         let y = face.boundingBox.origin.y * image.size.height
-        //let faceRect = CGRect(x: x, y: y, width: w, height: h)
         
         var browShape:String = ""
         var faceShape:String = ""
