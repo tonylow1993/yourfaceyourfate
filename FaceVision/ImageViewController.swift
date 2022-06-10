@@ -53,15 +53,62 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
         saveBtn.tintColor = .black
         shareBtn.tintColor = .black
         
+        backBtn.setTitle("Back", for: .normal)
+        saveBtn.setTitle("Save", for: .normal)
+        shareBtn.setTitle("Share", for: .normal)
+        
         process()
         
+    }
+
+    @IBAction func sharePhoto(_ sender: UIButton) {
+        let finalImage:UIImage = captureScreen()!
+        
+        InstagramHelper.sharedManager.postImageToInstagramWithCaption(imageInstagram: finalImage, instagramCaption: (hashtag1.text!+hashtag2.text!+hashtag3.text!),controller: self)
+        
+        /*let instagramURL = NSURL(string: "instagram://app")
+        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+            let saveImagePath = (documentsPath as NSString).appendingPathComponent("Image.igo")
+            let imageData = UIImagePNGRepresentation(image)
+            do {
+                try imageData?.write(to: URL.init(fileURLWithPath: saveImagePath), options: .atomicWrite)
+            } catch {
+                print("Instagram sharing error")
+            }
+            //let imageURL = NSURL(fileURLWithPath: saveImagePath)
+            documentInteractionController = UIDocumentInteractionController.init(url: URL.init(fileURLWithPath: saveImagePath))
+            //documentInteractionController.annotation = ["InstagramCaption" : "Testing"]
+            documentInteractionController.uti = "com.instagram.exclusivegram"
+            
+            print(saveImagePath)
+            //let bounds = CGRect()
+            if !documentInteractionController.presentOpenInMenu(from: self.view.frame, in: self.view, animated: true) {
+                print("Instagram not found")
+            }
+        }
+        else {
+            print("Instagram not found")
+        }
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let checkValidation = FileManager.default
+        let getImagePath = paths.appending("image.igo")
+        try!  checkValidation.removeItem(atPath: getImagePath)
+        let imageData =  UIImageJPEGRepresentation(finalImage, 1.0)
+        try! imageData?.write(to: URL.init(fileURLWithPath: getImagePath), options: .atomicWrite)
+        var documentController : UIDocumentInteractionController!
+        documentController = UIDocumentInteractionController.init(url: URL.init(fileURLWithPath: getImagePath))
+        documentController.uti = "com.instagram.exclusivegram"
+        documentController.presentOptionsMenu(from:self.view.frame, in: self.view, animated: true)*/
+
     }
     
     @IBAction func savePhoto(_ sender: UIButton) {
         let finalImage:UIImage = captureScreen()!
         let photoAlbum = YourFacePhotoAlbum()
         photoAlbum.save(image: finalImage)
-        let alert = UIAlertController(title: "儲存成功", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Saved", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
@@ -533,10 +580,10 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
     func captureScreen() -> UIImage? {
         backBtn.isHidden = true
         saveBtn.isHidden = true
-        //shareBtn.isHidden = true
+        shareBtn.isHidden = true
         backlbl.isHidden = true
         savelbl.isHidden = true
-        //sharelbl.isHidden = true
+        sharelbl.isHidden = true
         
         UIGraphicsBeginImageContext(self.view.bounds.size)
         self.view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
@@ -545,10 +592,10 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
         
         backBtn.isHidden = false
         saveBtn.isHidden = false
-        //shareBtn.isHidden = false
+        shareBtn.isHidden = false
         backlbl.isHidden = false
         savelbl.isHidden = false
-        //sharelbl.isHidden = false
+        sharelbl.isHidden = false
         return image
     }
     
@@ -561,7 +608,7 @@ class ImageViewController: UIViewController, UIDocumentInteractionControllerDele
             ] as [NSAttributedStringKey : Any]
         
         errorMsg.isHidden = false
-        errorMsg.attributedText = NSMutableAttributedString(string: "面部偵測失敗：請將目標面部移近並對準畫面正中位置", attributes: strokeTextAttributes)
+        errorMsg.attributedText = NSMutableAttributedString(string: "Face detection failed: please move the target face closer and aim at the center of the screen", attributes: strokeTextAttributes)
         
         self.image = nil
         browsDesc.isHidden = true
