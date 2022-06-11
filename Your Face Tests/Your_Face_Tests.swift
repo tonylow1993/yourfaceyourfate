@@ -30,4 +30,26 @@ class Your_Face_Tests: XCTestCase {
         
         XCTAssertTrue(validator.isAllFieldsNotEmpty(email, passowrd))
     }
+    
+    func testSignUp() throws {
+        let firstName = "firstName"
+        let lastName = "lastName"
+        let email = "test@test.com"
+        var passowrd = ""
+        
+        XCTAssertFalse(validator.isAllFieldsNotEmpty(firstName, lastName, email, passowrd))
+        
+        passowrd = "123456"
+        
+        XCTAssertTrue(validator.isAllFieldsNotEmpty(firstName, lastName, email, passowrd))
+        XCTAssertFalse(validator.isPasswordValid(passowrd))
+        
+        passowrd = "abc123456"
+        
+        XCTAssertFalse(validator.isPasswordValid(passowrd))
+        
+        passowrd = "0000abc!"
+        
+        XCTAssertTrue(validator.isPasswordValid(passowrd))
+    }
 }
