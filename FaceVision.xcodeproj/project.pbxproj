@@ -24,6 +24,8 @@
 		EA4EBA5E2853AADC00350457 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EBA5D2853AADC00350457 /* Validator.swift */; };
 		EA4EBA772853B08900350457 /* Your_Face_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EBA762853B08900350457 /* Your_Face_Tests.swift */; };
 		EA4EBA7D2853B09900350457 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EBA5D2853AADC00350457 /* Validator.swift */; };
+		EA4EBA7F2854483800350457 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EBA7E2854483800350457 /* PhotosCollectionViewController.swift */; };
+		EA4EBA812854486600350457 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4EBA802854486500350457 /* PhotoCollectionViewCell.swift */; };
 		EAE00F5B284F7AF5002FD9CE /* InstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE00F5A284F7AF5002FD9CE /* InstagramManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		EA4EBA5D2853AADC00350457 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		EA4EBA742853B08900350457 /* Your Face Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Your Face Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4EBA762853B08900350457 /* Your_Face_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Your_Face_Tests.swift; sourceTree = "<group>"; };
+		EA4EBA7E2854483800350457 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		EA4EBA802854486500350457 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAE00F5A284F7AF5002FD9CE /* InstagramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +141,8 @@
 				45B2CD3E2034673000689117 /* YourFacePhotoAlbum.swift */,
 				EAE00F5A284F7AF5002FD9CE /* InstagramManager.swift */,
 				EA4EBA5D2853AADC00350457 /* Validator.swift */,
+				EA4EBA7E2854483800350457 /* PhotosCollectionViewController.swift */,
+				EA4EBA802854486500350457 /* PhotoCollectionViewCell.swift */,
 			);
 			path = FaceVision;
 			sourceTree = "<group>";
@@ -321,11 +327,13 @@
 				E6E487671F35D345006B31C1 /* ViewController.swift in Sources */,
 				EA4EBA5E2853AADC00350457 /* Validator.swift in Sources */,
 				EA2120E628523C1D00C2ACA0 /* LoginController.swift in Sources */,
+				EA4EBA7F2854483800350457 /* PhotosCollectionViewController.swift in Sources */,
 				EA2120E82852496300C2ACA0 /* HomeController.swift in Sources */,
 				EA2120EA28524A2C00C2ACA0 /* SignUpController.swift in Sources */,
 				EAE00F5B284F7AF5002FD9CE /* InstagramManager.swift in Sources */,
 				E6E487771F35E682006B31C1 /* ImageViewController.swift in Sources */,
 				45B2CD3F2034673000689117 /* YourFacePhotoAlbum.swift in Sources */,
+				EA4EBA812854486600350457 /* PhotoCollectionViewCell.swift in Sources */,
 				E6E487651F35D345006B31C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

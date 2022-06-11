@@ -38,8 +38,6 @@ class LoginController: UIViewController, UINavigationControllerDelegate{
     
         if validator.isAllFieldsNotEmpty(emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines),
                                          passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) {
-            self.errorLabel.text =  "Please fill in all fields."
-        } else {
             // Signing in the user
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
@@ -59,6 +57,8 @@ class LoginController: UIViewController, UINavigationControllerDelegate{
                     self.view.window?.makeKeyAndVisible()
                 }
             }
+        } else {
+            self.errorLabel.text =  "Please fill in all fields."
         }
     }
 

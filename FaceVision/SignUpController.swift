@@ -36,7 +36,7 @@ class SignUpController: UIViewController {
         let validator = Validator()
         
         // Check that all fields are filled in
-        if validator.isAllFieldsNotEmpty(firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+        if !validator.isAllFieldsNotEmpty(firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
                                          lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
                                          emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
                                          passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)) {
