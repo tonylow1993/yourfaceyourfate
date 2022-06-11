@@ -76,11 +76,14 @@ class SignUpController: UIViewController {
                 
                 // Check for errors
                 if err != nil {
-                    
                     // There was an error creating the user
                     self.showError("Error creating user")
                 }
                 else {
+                    let alert = UIAlertController(title: "Sign Up", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Success", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    
                     // Transition to the home screen
                     self.transitionToHome()
                 }
@@ -93,7 +96,6 @@ class SignUpController: UIViewController {
     }
     
     func showError(_ message:String) {
-        
         errorLabel.text = message
         errorLabel.alpha = 1
     }

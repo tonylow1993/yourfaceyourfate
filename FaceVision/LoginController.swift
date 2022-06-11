@@ -49,6 +49,9 @@ class LoginController: UIViewController, UINavigationControllerDelegate{
                     self.errorLabel.alpha = 1
                 }
                 else {
+                    let alert = UIAlertController(title: "Login", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "Success", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                     
                     let viewController = self.storyboard?.instantiateViewController(withIdentifier: "VC") as? ViewController
                     
